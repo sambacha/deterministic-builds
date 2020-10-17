@@ -1,0 +1,66 @@
+---
+title: Deterministic Build
+version:
+man:
+---
+
+
+### Reproducible Builds 
+
+```bash
+export SOURCE_DATE_TZOFFSET = $(shell dpkg-parsechangelog -SDate | tail -c6)
+```
+
+`LC_ALL=C date -u -d '2015-10-21' `
+
+
+In some cases, it is preferable to keep the original times for files that have
+not been created or modified during the build process:
+
+```bash
+$ find build -newermt "@${SOURCE_DATE_EPOCH}" -print0 |
+    xargs -0r touch --no-dereference --date="@${SOURCE_DATE_EPOCH}"
+$ zip -r product.zip build
+```
+
+`--clamp-mtime` flag which will only set the time when the file is more recent
+than the value specified with --mtime:
+
+```bash
+$ tar --mtime='2015-10-21 00:00Z' --clamp-mtime -cf product.tar build
+```
+
+# Works with GNU Tar 1.28
+```bash
+$ tar --sort=name -cf product.tar build
+```
+For older versions or other archive formats, it is possible to use find and sort
+to achieve the same effect:
+
+```bash
+$ find build -print0 | LC_ALL=C sort -z |
+    tar --no-recursion --null -T - -cf product.tar
+```
+
+Tar offers a way to specify the user and group owning the file. Using `0/0` and
+`--numeric-owner` is a safe bet, as it will effectively record 0 as values:
+
+```bash
+$ tar --owner=0 --group=0 --numeric-owner -cf product.tar build
+```
+
+Full example
+The recommended way to create a Tar archive is thus:
+
+```bash
+$ tar --sort=name \
+      --mtime="@${SOURCE_DATE_EPOCH}" \
+      --owner=0 --group=0 --numeric-owner \
+      --pax-option=exthdr.name=%d/PaxHeaders/%f,delete=atime,delete=ctime \
+      -cf product.tar build
+```
+
+GNU ar and other tools from binutils have a deterministic mode which will use
+zero for UIDs, GIDs, timestamps, and use consistent file modes for all files. It
+can be made the default by passing the --enable-deterministic-archives option to
+./configure
