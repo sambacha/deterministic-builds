@@ -44,7 +44,11 @@ than the value specified with --mtime:
 $ tar --mtime='2015-10-21 00:00Z' --clamp-mtime -cf product.tar build
 ```
 
-# Works with GNU Tar 1.28
+#### Creating a Tarball
+
+Works with GNU Tar 1.28
+> note: Mac Users must use GNU Utils, as BSDTAR does not have some of these options. use `gtar` with `g` prefix denoting `GNU` core utils
+
 ```bash
 $ tar --sort=name -cf product.tar build
 ```
