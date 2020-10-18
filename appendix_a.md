@@ -16,18 +16,23 @@
 | Rule  US   2007 max   \-   Mar Sun>=8   2:00  1:00 D          |                         |                            |                             |             |                            |
 | Rule  US   2007 max   \-   Nov Sun>=1   2:00  0    S          |                         |                            |                             |             |                            |
 | Reformatted a Bit                                             |                         |                            |                             |             |                            |
-| From                                                          | To                      | On                         | At                          | Action      |                            |
-| 1918                                                          | 1919                    | last Sunday                | in March                    | 02:00 local | go to daylight saving time |
-| in October                                                    | return to standard time |                            |                             |             |                            |
-| 1942 only                                                     | February 9th            | go to “war time”           |                             |             |                            |
-| 1945 only                                                     | August 14th             | 23:00 UT                   | rename “war time” to “peace |             |                            |
-| time;” clocks don’t change                                    |                         |                            |                             |             |                            |
-| September 30th                                                | 02:00 local             | return to standard time    |                             |             |                            |
-| 1967                                                          | 2006                    | last Sunday                | in October                  |             |                            |
-| 1973                                                          | in April                | go to daylight saving time |                             |             |                            |
-| 1974 only                                                     | January 6th             |                            |                             |             |                            |
-| 1975 only                                                     | February 23rd           |                            |                             |             |                            |
-| 1976                                                          | 1986                    | last Sunday                | in April                    |             |                            |
-| 1987                                                          | 2006                    | first Sunday               |                             |             |                            |
-| 2007                                                          | present                 | second Sunday in March     |                             |             |                            |
-| first Sunday in November                                      | return to standard time |                            |                             |             |                            |
+
+
+### Additional Info
+
+| **From**                   | **To**                  | **On**                     | **At**                      | **Action**  | ****                       |
+|----------------------------|-------------------------|----------------------------|-----------------------------|-------------|----------------------------|
+| 1918                       | 1919                    | last Sunday                | in March                    | 02:00 local | go to daylight saving time |
+| in October                 | return to standard time |                            |                             |             |                            |
+| 1942 only                  | February 9th            | go to “war time”           |                             |             |                            |
+| 1945 only                  | August 14th             | 23:00 UT                   | rename “war time” to “peace |             |                            |
+| time;” clocks don’t change |                         |                            |                             |             |                            |
+| September 30th             | 02:00 local             | return to standard time    |                             |             |                            |
+| 1967                       | 2006                    | last Sunday                | in October                  |             |                            |
+| 1973                       | in April                | go to daylight saving time |                             |             |                            |
+| 1974 only                  | January 6th             |                            |                             |             |                            |
+| 1975 only                  | February 23rd           |                            |                             |             |                            |
+| 1976                       | 1986                    | last Sunday                | in April                    |             |                            |
+| 1987                       | 2006                    | first Sunday               |                             |             |                            |
+| 2007                       | present                 | second Sunday in March     |                             |             |                            |
+| first Sunday in November   | return to standard time |                            |                             |             |                            |
