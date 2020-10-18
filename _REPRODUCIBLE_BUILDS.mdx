@@ -45,7 +45,14 @@ $ find build -print0 | LC_ALL=C sort -z |
 Tar offers a way to specify the user and group owning the file. Using `0/0` and
 `--numeric-owner` is a safe bet, as it will effectively record 0 as values:
 
+### Deterministic 
+<!-- Lyapunov -->
+
+> Empty Directory is created and archived to be embedded within 
+
 ```bash
+$ mkdir -p build/.emptydir
+$ tar --owner=0 --group=0 --numeric-owner -cf pkg.tar build/.emptydir
 $ tar --owner=0 --group=0 --numeric-owner -cf product.tar build
 ```
 
