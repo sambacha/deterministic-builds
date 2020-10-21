@@ -1,4 +1,4 @@
- #!/usr/bin/env bash
+#!/usr/bin/env bash
 
 # constants of the universe
 export TZ='UTC' LC_ALL='C'
