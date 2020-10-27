@@ -42,6 +42,30 @@ a tarball, and then checksumming that, and (ideally) providing a GPG signature c
 If the checksum is not reproducible, it becomes much more difficult to easily and reliably verify that a generated tarball 
 contains the same source code as a particular git commit.
 
+#### git-evtag
+
+`$ git-evtag `
+
+##### generate tag
+```bash
+$ git-evtag sign v2015.10
+ ( type your tag message, note a Git-EVTag-v0-SHA512 line in the message )
+$ git show v2015.10
+ ( Note signature covered by GPG signature )
+ ```
+ ##### verify tag
+ 
+ ```bash
+ $ git-evtag verify v2015.10
+gpg: Signature made Sun 28 Jun 2015 10:49:11 AM EDT
+gpg:                using RSA key 0xDC45FD5921C13F0B
+gpg: Good signature from "Colin Walters <walters@redhat.com>" [ultimate]
+gpg:                 aka "Colin Walters <walters@verbum.org>" [ultimate]
+Primary key fingerprint: 1CEC 7A9D F7DA 85AB EF84  3DC0 A866 D7CC AE08 7291
+     Subkey fingerprint: AB92 8A9C F8DD 0629 09C3  7BBD DC45 FD59 21C1 3F0B
+Successfully verified: Git-EVTag-v0-SHA512: b05f10f9adb0eff352d90938588834508d33fdfcedbcfc332999ee397efa321d1f49a539f1b82f024111a281c1f441002e7f536b06eb04d41857b01636f6f268
+```
+
 ### strftime()
 
 The C and POSIX standards define for the strftime() function and the date utility
