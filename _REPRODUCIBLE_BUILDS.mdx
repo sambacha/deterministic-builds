@@ -18,6 +18,30 @@ reproduciable debian images, this is what the offical docker images use
 $ GIT_AUTHOR_DATE="Thu, 01 Jan 1970 00:00:00 +0000" GIT_COMMITTER_DATE="Thu, 01 Jan 1970 00:00:00 +0000" git commit --allow-empty -m 'Initial commit'
 ```
 
+### Git Tags
+
+> be the primary artifact
+
+[git-evtag](https://github.com/cgwalters/git-evtag)
+
+Replacing tarballs 
+
+What git-evtag implements is an algorithm for providing a strong checksum over the complete source objects for the target:
+
+```diff
+-commit (- trees - blobs - submodules)
++commit (+ trees + blobs + submodules)
+```
+
+Then it's integrated with GPG for end-to-end verification. (Although, one could also wrap the checksum in X.509 or some other 
+public/private signature solution).
+
+This is similar to what project distributors often accomplish by using git archive, or make dist, or similar tools to generate 
+a tarball, and then checksumming that, and (ideally) providing a GPG signature covering it.
+
+If the checksum is not reproducible, it becomes much more difficult to easily and reliably verify that a generated tarball 
+contains the same source code as a particular git commit.
+
 ### strftime()
 
 The C and POSIX standards define for the strftime() function and the date utility
