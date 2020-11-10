@@ -10,6 +10,16 @@ reproduciable debian images, this is what the offical docker images use
 
 `https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fdebuerreotype%2Fdocker-debian-artifacts%2Ftree%2Fdist-amd64%2Fbuster` 
 
+### npm `pack .tgz.`
+
+```bash
+https://github.com/npm/cli/commit/58d2aa58d5f9c4db49f57a5f33952b3106778669#diff-eabad0b45ec780b8b57ae6e3d47fd7d063680bea3acdc6b98a4b45ba3b808ccc
+```
+```diff
++        // Provide a specific date in the 1980s for the benefit of zip,
++        // which is confounded by files dated at the Unix epoch 0.
++        mtime: new Date('1985-10-26T08:15:00.000Z'),
+```        
 
 
 ### Git
