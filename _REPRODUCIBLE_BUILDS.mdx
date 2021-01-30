@@ -31,6 +31,16 @@ $ GIT_AUTHOR_DATE="Thu, 01 Jan 1970 00:00:00 +0000" GIT_COMMITTER_DATE="Thu, 01 
 ```bash
 GIT_AUTHOR_DATE="Thu, 01 Jan 1970 00:00:00 +0000" GIT_COMMITTER_DATE="Thu, 01 Jan 1970 00:00:00 +0000" git commit --allow-empty --allow-empty-message -m ''
 ```
+### time2posix 
+
+  IEEE Std 1003.1-1988 (``POSIX.1'') legislates that a time_t value of 536457599 shall
+  correspond to "Wed Dec 31 23:59:59 GMT 1986."  This effectively implies that POSIX
+  time_t's cannot include leap seconds and, therefore, that the system time must be
+  adjusted as each leap occurs.
+
+
+
+### RFC 822 
 
 | **RFC 822:**<br>_RFC 822 formatted date_             | Thu, 01 Jan 1970 00:00:00 +0000                  |
 | ---------------------------------------------------- | ------------------------------------------------ |
