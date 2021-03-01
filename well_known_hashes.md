@@ -6,6 +6,13 @@
 6ef19b41225c5369f1c104d45d8d85efa9b057b53b14b4b9b939dd74decc5321
 ```
 
+##### Well Knwon Hash: Keccak or SHA3?
+
+> Keccak:
+```
+c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470
+```
+
 ```bash
 $ GIT_AUTHOR_DATE="Thu, 01 Jan 1970 00:00:00 +0000" GIT_COMMITTER_DATE="Thu, 01 Jan 1970 00:00:00 +0000" git commit --allow-empty -m 'Initial commit'
 ```
