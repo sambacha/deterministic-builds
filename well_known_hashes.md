@@ -9,6 +9,7 @@
 ##### Well Knwon Hash: Keccak or SHA3?
 
 > Keccak:
+
 ```
 c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470
 ```
@@ -16,6 +17,7 @@ c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470
 ```bash
 $ GIT_AUTHOR_DATE="Thu, 01 Jan 1970 00:00:00 +0000" GIT_COMMITTER_DATE="Thu, 01 Jan 1970 00:00:00 +0000" git commit --allow-empty -m 'Initial commit'
 ```
+
 ```diff
 -rawsz sha1:20
 +rawsz sha256:32
@@ -36,7 +38,5 @@ $ GIT_AUTHOR_DATE="Thu, 01 Jan 1970 00:00:00 +0000" GIT_COMMITTER_DATE="Thu, 01 
 +empty_tree sha256:6ef19b41225c5369f1c104d45d8d85efa9b057b53b14b4b9b939dd74decc5321
 ```
 
-The SHA2 `"6ef19b41225c5369f1c104d45d8d85efa9b057b53b14b4b9b939dd74decc5321"` is the new 
+The SHA2 `"6ef19b41225c5369f1c104d45d8d85efa9b057b53b14b4b9b939dd74decc5321"` is the new
 SHA1 `"4b825dc642cb6eb9a060e54bf8d69288fbee4904"` empty tree.
-
-

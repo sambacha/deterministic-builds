@@ -1,7 +1,6 @@
 ---
 title: Deterministic Build - TimeZones
 version: draft
-
 ---
 
 > Additional Details
@@ -9,10 +8,11 @@ version: draft
 #### TimeZones
 
 ```bash
-date -u +"%Y-%m-%d %H-%M-%SZ" 
+date -u +"%Y-%m-%d %H-%M-%SZ"
 date -u +"%Y-%m-%dT%H:%MZ"
 ```
-Z and +00:00 are the same (mostly). For purposes of translating time, they both mean UTC. 
+
+Z and +00:00 are the same (mostly). For purposes of translating time, they both mean UTC.
 However England is +00:00 in winter and +01:00 in summer (BST).
 Z is UTC, while +00:00 is GMT.
 
@@ -24,7 +24,6 @@ date +%FT%T%z # -Iseconds or +%Y-%m-%dT%H:%M:%S%z
 date +%FT%H:%M # -Iminutes or +%Y-%m-%dT%H:%M%z
 date -u +%FT%TZ
 ```
- 
 
 #### Valid ISO 8601 date or time formats
 
@@ -39,7 +38,8 @@ date -u +%FT%TZ
 1559 (%H%M)
 15 (%H)
 15:59:24+03 (UTC offset doesn't have to include minutes)
-````
+```
+
 ```bash
 $ date -u -Iseconds
 $ date -u '+%Y-%m-%dT%k:%M:%S%z'
