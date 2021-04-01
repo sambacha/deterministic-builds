@@ -1,8 +1,28 @@
----
+# Deterministic Builds
+
+- [Deterministic Builds](#deterministic-builds)
+  * [debuerreotype](#debuerreotype)
+    + [npm `pack .tgz.`](#npm--pack-tgz-)
+    + [Git](#git)
+    + [time2posix](#time2posix)
+    + [RFC 822](#rfc-822)
+    + [Git Tags](#git-tags)
+      - [git-evtag](#git-evtag)
+        * [generate tag](#generate-tag)
+        * [verify tag](#verify-tag)
+    + [strftime()](#strftime--)
+    + [Reproducible Builds](#reproducible-builds)
+      - [Creating a Tarball](#creating-a-tarball)
+    + [Deterministic](#deterministic)
+    + [Famous Timestamps](#famous-timestamps)
+      - [Timetables](#timetalbes)
+      - [Well Known Hashes](#well-known-hashes)
+
+```yaml
 title: Deterministic Build
 time_fmt: `date -u +"%Y-%m-%dT%H:%MZ"`
 tz: 2021-03-17T01:14Z
----
+```
 
 ## debuerreotype
 
@@ -197,7 +217,7 @@ can be made the default by passing the --enable-deterministic-archives option to
 2009-01-13 12:46:54 PST == 2009-01-03 18:15:05 UTC
 [https://web.archive.org/web/20130316013625/http://sourceforge.net/news/?group_id=244765](http://sourceforge.net/news/?group_id=244765)
 
-#### Timetalbes
+#### Timetables
 
 | **Text Date:Date in human-readable text**  | **Saturday, January 3, 2009 6:15:05 PM** |
 | ------------------------------------------ | ---------------------------------------- |
